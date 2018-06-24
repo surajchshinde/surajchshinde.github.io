@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Lonavala Foods</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<style type="text/css" media="screen">
-		.circle {
-		width: 270px;
-		height: 270px;
-		background: red;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
-		border-radius: 50%;
-		}
-		/*
-			* ==== octogone
-			*/
-			.octo, .octo div {
-			margin: 0 auto;
-			transform-origin: 50% 50%;
-			overflow: hidden;
-			width: 300px;
-			height: 300px;
-			}
-			.octo, .octo div {
-			width: 270px;
-			height: 270px;
-			}
-			.octo {
-			transform: rotate(45deg);
-			}
-			.octo1 {
-			transform: rotate(-45deg);
+		#header {
+			width: 100%;
+			box-shadow: 1px 1px 10px #000;
+			height: auto;
+			/*position: absolute;*/
+			z-index: 10;
+				}
+		.trend{
+				background: url(img/background.jpg) repeat left center #440228;
+				width: 100%;
+				height: auto;
+				color: #f05f96;
 			}
 			/*
 			* ==== dodecagon
@@ -52,76 +38,90 @@
 			.dode2 {
 			transform: rotate(-60deg);
 			}
-		.part {
-			padding: 50px 20px 85px;
-			background: #205B73;
-			color: #AFE4FC;
-			}
-			.part:nth-of-type(2n) {
-			background: #F2E6A7;
-			color: #CDAE51
-			}
-			/* presentation */
-		body {
-		padding: 0; margin: 0;
-		font-family: "Open Sans Condensed", "Open Sans", "Droid Sans", sans-serif;
-		font-size: 1.2em;
-		line-height: 1.7;
-		/*background: #208C8C;*/
-		    background: url(img/background.jpg) repeat left center #440228;
-		
+			.navbar-inverse {
+		background-color: #0c061e;
+		border-color: #0c061e;
+		border-radius: 0px;
 		}
-		h1, h2 {
-		font-weight: normal;
-		text-align: center;
+		.navbar-inverse .navbar-nav>li>a {
+		color: #f05f96;
+		font-weight: bold;
+		font-size: 16px;
 		}
-		h1 {
-		margin-bottom: 0;
-		}
-		h2 {
-		margin: 0 0 1.7em;
-		    color: #f05f96;
-		}
-		p {
-		max-width: 600px;
-		margin: 3em auto;
-		text-align: center;
-		}
-		a {
-		color: #FFF;
+		.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+		color: #f05f96;
+		background-color: #3B2483;
 		}
 		</style>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-				<div class="col-lg-4"><br>
-					<h2>Chikki</h2>
-					<div class="octo">
-						<div class="octo1">
-							<img src="img/chikki.jpg" alt="Chikki" width="320" height="316" />
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4"><br>
-					<h2>Jelly</h2>
+		<div id="header">
+			<div class="container">
+				<h1><img src="img/logo.png" alt="LonavalaFoods.com" width="50px">  LonavalaFoods.com</h1>
+			</div>
+		</div>
+		<div class="container trend">
+			<div class="row text-center ">
+				<br>
+				<br>
+				<br>
+				<div class="col-lg-4">
 					<div class="dodeca">
 						<div class="dode1">
 							<div class="dode2">
-								<img src="img/jelly-sweets.png" alt="Jelly" width="auto" height="313" />
+								<a href="#"><img src="img/chikki.jpg" alt="Jelly" width="313" height="313" /></a>
 							</div>
 						</div>
 					</div>
+					<br>
+					<h2><a href="">Chikki</a></h2>
+					<br>
 				</div>
-				<div class="col-lg-4"><br>
-					<h2>Fudge</h2>
-					<center><img class="circle" src="img/fudge.jpg" alt="Fudge" width="320" height="313" /></center>
+				<div class="col-lg-4">
+					<div class="dodeca">
+						<div class="dode1">
+							<div class="dode2">
+								<a href="#"><img src="img/jelly-sweets.png" alt="Jelly" width="313" height="313" /></a>
+							</div>
+						</div>
+					</div>
+					<br>
+					<h2><a href="#">Jelly</a></h2>
+					<br>
 				</div>
+				<div class="col-lg-4">
+					
+					<div class="dodeca">
+						<div class="dode1">
+							<div class="dode2">
+								<a href="#"><img src="img/fudge.jpg" alt="Jelly" width="270" height="313" /></a>
+							</div>
+						</div>
+					</div>
+					<br>
+					<h2><a href="#">Fudge</a></h2>
+					<br>
 				</div>
 			</div>
 		</div>
-		
-		
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Shops</a></li>
+					<li><a href="#">New Product</a></li>
+					<li><a href="#">Reviews</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">About Us</a></li>
+				</ul>
+				<form class="navbar-form navbar-right" action="/action_page.php">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</nav>
 	</body>
 </html>
