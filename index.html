@@ -7,10 +7,48 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet"> -->
 		<!-- <link href="http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&amp;subset=latin,cyrillic-ext,cyrillic" rel="stylesheet" type="text/css"> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
 		<style type="text/css" media="screen">
 		*{
 			font-family:'Vollkorn', serif;
+		}
+		#rotate{
+		z-index: 20;
+		position: fixed;
+		margin-top: 190px;
+		left: -40px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		transform: rotate(rotate(270deg));
+		-ms-transform: rotate(rotate(270deg));
+		-moz-transform: rotate(rotate(270deg));
+		-webkit-transform: rotate(270deg);
+		-o-transform: rotate(rotate(270deg));
+		}
+		.sections.section-how-it-works {
+		background: url(img/section1-bg.png) bottom center #ededed repeat-x;
+		}
+		.section-how-it-works .steps {
+		border: 0px solid red;
+		max-width: 136px;
+		max-height: 124px;
+		min-height: 124px;
+		margin: auto;
+		display: block;
+		}
+		.section-how-it-works h3 {
+		background: #f75d34;
+		color: #fff;
+		padding: 5px;
+		display: inline-table;
+		text-align: center;
+		padding: 5px 25px;
+		border-bottom-left-radius: 10px;
+		}
+		.center, .section-how-it-works h3, .section-how-it-works p, .mobile-search-menu, .progress-dot, #mobile-menu li a, .result-merchant p.cod-text {
+		text-align: center;
 		}
 		#header {
 			width: 100%;
@@ -23,7 +61,7 @@
 			width: auto;
 			height: auto;
 			min-height: 550px;
-			background: url(img/background.jpg) repeat left center #440228;
+			background: url(img/bgpattern.jpg) repeat left center #440228;
 		}
 		#we{
 			width: auto;
@@ -43,7 +81,7 @@
 			width: auto;
 			height: auto;
 			min-height: 600px;
-			background: url(img/Jellycandy.jpg) repeat left center #440228;
+			background: url(img/JellyCandy.jpg) repeat left center #440228;
 			background-size: 100%;
 			
 		}
@@ -70,8 +108,6 @@
 			background-size: 100%;
 			padding-bottom: 60px;
 		}
-
-
 		.askPrice{
 			position: absolute;
 		top: 50%;
@@ -146,12 +182,69 @@
 		</style>
 	</head>
 	<body>
+		
+		
 		<div id="header">
 			<div class="container">
 				<h1><img src="img/Logo.png" alt="LonavalaFoods.com" width="50px">  LonavalaFoods.com</h1>
 			</div>
 		</div>
-		
+		<button type="button" id="rotate" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#Feedback">Feedback</button>
+		<div class="modal fade" id="Feedback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header " style="border-radius: 5px 5px 0px 0px;">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title "id="exampleModalLabel" >Lonavala Foods</h4>
+						
+					</div>
+					<div class="modal-body">
+						<center>
+						<!-- <h1 class="modal-title" id="exampleModalLabel">Lonavala Foods</h1>						 -->
+						<!-- <h3 class="modal-title blink" id="exampleModalLabel">50% Discount On First Order</h3> -->
+						</center>
+						<div class="info">
+							<div class="infomain">
+								<div class="row">
+									<div class="col-md-4">
+										<h3 style="text-align: left;
+										font-size: 20px; "><span class="glyphicon glyphicon-map-marker"></span> Find US</h3>
+										<p>Bd de Magenta</p>
+										<p>Paris, 1006, France</p>
+										<h3 style="text-align: left;
+										font-size: 20px;"><span class="glyphicon glyphicon-envelope"></span> Email </h3>
+										<p>office@mail.com</p>
+										<p>sales@mail.com</p>
+										<h3 style="text-align: left;
+										font-size: 20px;"> <span class="glyphicon glyphicon-earphone"></span> Phones</h3>
+										<p>+339 89 89 55 739</p>
+										<p>+339 89 89 55 739</p>
+									</div>
+									<div class="col-md-8 text-center">
+										<h3>Get in touch</h3>
+										<form class="form-horizontal" action="/action_page.php">
+											<input type="text" class="form-control"  placeholder="Name"><br>
+											<input type="text" class="form-control" placeholder="Contact Number"><br>
+											<input type="text" class="form-control" placeholder="E-mail"><br>
+											<textarea id="myTextarea" class="form-control" rows="5"  placeholder="Your Message"></textarea><br>
+											
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="modal-footer" style="border-radius: 0px 0px 5px 5px;">
+						<center>
+						<button type="button" class="btn btn-primary">Submit</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<ul class="nav navbar-nav">
@@ -166,9 +259,11 @@
 				
 			</div>
 		</nav>
-		
+		<!-- <button type="button" id="rotate" class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#exampleModal">Open Modal</button>
+		-->
 		<section id="top" class="container trend">
 			<div class="row text-center ">
+				
 				<h1 style="color: yellow;">Our Speciality</h1>
 				<h3 style="color: #fff;"><i>We're in love with food. The secret of quality of life? Quality products.</i></h3>
 				<br>
@@ -211,159 +306,196 @@
 				</div>
 			</div>
 		</section>
-		<section id="we" class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1 class="text-center" style="margin-top: 50px;">We are happy to help you...!</h1>
-					<div class="col-lg-2 text-center"></div>
-					<div class="col-lg-8 text-center">
-						<center><p style=" text-align:center; "><i>Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</i></p></center>
+		<div class="sections section-how-it-works">
+			<div class="container text-center">
+				<h2>How it works</h2>
+				<p class="center">Get your favourite food in 4 simple steps</p>
+				<div class="row">
+					<div class="col-md-3 col-sm-3 center">
+						<div class="steps step1-icon">
+							<img src="img/step1.png">
+						</div>
+						<h3>Search</h3>
+						<p>Find all restaurants available near you</p>
 					</div>
-					<div class="col-lg-2 text-center"></div>
-					<br><br>
-					<div class="col-lg-4 text-center">
-						<img class="weimg" src="img/user.png" alt="User">
-						<h2>Client</h2>
-						<center><p>Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</p><button class="btn btn-lg btn-primary btn-block" type="submit">Pre-Order</button></center>
+					<div class="col-md-3 col-sm-3 center">
+						<div class="steps step2-icon">
+							<img src="img/step2.png">
+						</div>
+						<h3>Choose</h3>
+						<p>Browse hundreds of menus to find the food you like</p>
 					</div>
-					<div class="col-lg-4 text-center">
-						<img class="weimg" src="img/agent.png" alt="Agents">
-						<h2>Agency</h2>
-						<center><p>Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</p><button class="btn btn-lg btn-primary btn-block" type="submit">Enquiry</button></center>
+					<div class="col-md-3 col-sm-3 center">
+						<div class="steps step2-icon">
+							<img src="img/step3.png">
+						</div>
+						<h3>Pay</h3>
+						<p>It's quick, secure and easy</p>
 					</div>
-					<div class="col-lg-4 text-center">
-						<img class="weimg" src="img/service.png" alt="Sellers">
-						<h2>Seller</h2>
-						<center><p >Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</p><button class="btn btn-lg btn-primary btn-block" type="submit">Contact Us</button></center>
+					<div class="col-md-3 col-sm-3 center">
+						<div class="steps step2-icon">
+							<img src="img/step4.png">
+						</div>
+						<h3>Enjoy</h3>
+						<p>Food is prepared &amp; delivered to your door</p>
 					</div>
 				</div>
+				</div> <!--container-->
 			</div>
-			<br>
-		</section>
-		<section id="chikki" class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h1 style="color: #fff; font-size: 55px; margin-bottom: 30px;     margin-top: 30px;">Chikki</h1>
-					<div class="col-lg-6">
-						<img class=" img-thumbnail img-responsive" src="img/chikkiprod.jpg"  style="height: 400px;width: 400px;" alt="Chikki">
-						<button class="btn btn-lg btn-primary askPrice" type="submit">
-						₹ | Ask for Price</button><br>
-					</div>
-					<div class="col-lg-6">
-						<div class="info">
-							<div class="infomain">
-								<h2>Chikki</h2>
-								<p>Chikki (Hindi: चिक्की) is a traditional Indian sweet (brittle) generally made from peanuts and jaggery.There are several different varieties of chikki in addition to the most common groundnut (peanut) chikki. Each variety of chikki is named depending upon the ingredients used, which include puffed or roasted Bengal gram, sesame, puffed rice, beaten rice, or Khobara (desiccated coconut).</p>
-								<p>In regions of North India, especially Bihar and Uttar Pradesh, this sweet is called Layiya Patti. In Sindh and Sindhi regions of India, it is called Layee or Lai (Sindhi: لائي‎) and in Bangladesh, it is known as kôtkôti (Bengali: কটকটি). Similar dishes are also very popular in Brazil, where it is known as pé-de-moleque, and in Paraguay, where it is called Ka'í Ladrillo.</p>
-							</div>
+			<section id="we" class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h1 class="text-center" style="margin-top: 50px;">We are happy to help you...!</h1>
+						<div class="col-lg-2 text-center"></div>
+						<div class="col-lg-8 text-center">
+							<center><p style=" text-align:center; "><i>Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</i></p></center>
 						</div>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Yes! I am interested</button>
+						<div class="col-lg-2 text-center"></div>
+						<br><br>
+						<div class="col-lg-4 text-center">
+							<img class="weimg" src="img/user.png" alt="User">
+							<h2>Client</h2>
+							<center><p>Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</p><button class="btn btn-lg btn-primary btn-block" type="submit"  data-toggle="modal" data-target="#Feedback">Pre-Order</button></center>
+						</div>
+						<div class="col-lg-4 text-center">
+							<img class="weimg" src="img/agent.png" alt="Agents">
+							<h2>Agency</h2>
+							<center><p>Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</p><button class="btn btn-lg btn-primary btn-block" type="submit" data-toggle="modal" data-target="#Feedback">Enquiry</button></center>
+						</div>
+						<div class="col-lg-4 text-center">
+							<img class="weimg" src="img/service.png" alt="Sellers">
+							<h2>Seller</h2>
+							<center><p >Nulla non mattis risus. Praesent accumsan at diam ut molestie.Non mattis risus. Praesent accumsan at diam ut molestie. Vivamus est mauris, rutrum sed sollicitudin id, semper vel justo. Donec vitae magna elementum, tempus ante in, aliquam nibh.</p><button class="btn btn-lg btn-primary btn-block" type="submit" data-toggle="modal" data-target="#Feedback">Contact Us</button></center>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="jelly" class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h1 style="color: #fff; font-size: 55px; margin-bottom: 30px;     margin-top: 30px;">Jelly</h1>
-					
-					<div class="col-lg-6 order-lg-12">
-						<div class="info">
-							<div class="infomain">
-								<h2>Jelly</h2>
-								<p>Fruit jams and jellies are manufactured by canning fruits .Jellies are a mixture of fruit juice, sugar and are clear and bright with a tender but firm texture. Jams are thicker, made by cooking fruit and sugar until the texture is almost a puree.</p>
-								<p>The jams and jellies battled innovative breakfast foods that competed with the traditional toast-and-jam breakfast. This product experiences the strongest sales in the autumn back-to-school season.</p>
-								<p>At National Chikki, we provide wide variety of nutritional fruit Jams and Jellies. These products are prepared from different flavors such as apple, mango, blackberries, grapes, pineapple, orange, strawberry, mixed fruit and many more. These are extremely tasty and are a perfect accompaniment for breakfast and evening snacks. The quality of our jams and jellies are praised by people of all age for its high nutrition content and low calorie. One taste of our products can bring you back into the true old fashion delicious flavour of times past or more modern variations of current times.</p>
-							</div>
+				<br>
+			</section>
+			<section id="chikki" class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h1 style="color: #fff; font-size: 55px; margin-bottom: 30px;     margin-top: 30px;">Chikki</h1>
+						<div class="col-lg-6">
+							<img class=" img-thumbnail img-responsive" src="img/chikkiprod.jpg"  style="height: 400px;width: 400px;" alt="Chikki">
+							<button class="btn btn-lg btn-primary askPrice" type="submit" data-toggle="modal" data-target="#Feedback">
+							₹ | Ask for Price</button><br>
 						</div>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Yes! I am interested</button>
+						<div class="col-lg-6">
+							<div class="info">
+								<div class="infomain">
+									<h2>Chikki</h2>
+									<p>Chikki (Hindi: चिक्की) is a traditional Indian sweet (brittle) generally made from peanuts and jaggery.There are several different varieties of chikki in addition to the most common groundnut (peanut) chikki. Each variety of chikki is named depending upon the ingredients used, which include puffed or roasted Bengal gram, sesame, puffed rice, beaten rice, or Khobara (desiccated coconut).</p>
+									<p>In regions of North India, especially Bihar and Uttar Pradesh, this sweet is called Layiya Patti. In Sindh and Sindhi regions of India, it is called Layee or Lai (Sindhi: لائي‎) and in Bangladesh, it is known as kôtkôti (Bengali: কটকটি). Similar dishes are also very popular in Brazil, where it is known as pé-de-moleque, and in Paraguay, where it is called Ka'í Ladrillo.</p>
+								</div>
+							</div>
+							<button class="btn btn-lg btn-primary btn-block" type="submit" data-toggle="modal" data-target="#Feedback">Yes! I am interested</button>
+						</div>
 					</div>
-					<div class="col-lg-6 order-lg-1">
-						<img class=" img-thumbnail img-responsive " src="img/candy.jpg"  style="height: 400px;width: 400px;" alt="Jelly">
+				</div>
+			</section>
+			<section id="jelly" class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h1 style="color: #fff; font-size: 55px; margin-bottom: 30px;     margin-top: 30px;">Jelly</h1>
 						
-						<button class="btn btn-lg btn-primary askPrice" type="submit">₹ | Ask For Price</button>
+						<div class="col-lg-6 order-lg-12">
+							<div class="info">
+								<div class="infomain">
+									<h2>Jelly</h2>
+									<p>Fruit jams and jellies are manufactured by canning fruits .Jellies are a mixture of fruit juice, sugar and are clear and bright with a tender but firm texture. Jams are thicker, made by cooking fruit and sugar until the texture is almost a puree.</p>
+									<p>The jams and jellies battled innovative breakfast foods that competed with the traditional toast-and-jam breakfast. This product experiences the strongest sales in the autumn back-to-school season.</p>
+									<p>At National Chikki, we provide wide variety of nutritional fruit Jams and Jellies. These products are prepared from different flavors such as apple, mango, blackberries, grapes, pineapple, orange, strawberry, mixed fruit and many more. These are extremely tasty and are a perfect accompaniment for breakfast and evening snacks. The quality of our jams and jellies are praised by people of all age for its high nutrition content and low calorie. One taste of our products can bring you back into the true old fashion delicious flavour of times past or more modern variations of current times.</p>
+								</div>
+							</div>
+							<button class="btn btn-lg btn-primary btn-block" type="submit" data-toggle="modal" data-target="#Feedback">Yes! I am interested</button>
+						</div>
+						<div class="col-lg-6 order-lg-1">
+							<img class=" img-thumbnail img-responsive " src="img/candy.jpg"  style="height: 400px;width: 400px;" alt="Jelly">
+							
+							<button class="btn btn-lg btn-primary askPrice" type="submit" data-toggle="modal" data-target="#Feedback">₹ | Ask For Price</button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="fudge" class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h1 style="color: brown; font-size: 55px; margin-bottom: 30px;     margin-top: 30px;">Fudge</h1>
-					<div class="col-lg-6">
-						<img class=" img-thumbnail img-responsive" src="img/fudgeProd.jpg"    style="height: 400px;width: 400px;" alt="Chikki">
-						<button class="btn btn-lg btn-primary askPrice" type="submit">₹ | Ask For Price</button>
+			</section>
+			<section id="fudge" class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h1 style="color: brown; font-size: 55px; margin-bottom: 30px;     margin-top: 30px;">Fudge</h1>
+						<div class="col-lg-6">
+							<img class=" img-thumbnail img-responsive" src="img/fudgeProd.jpg"    style="height: 400px;width: 400px;" alt="Chikki">
+							<button class="btn btn-lg btn-primary askPrice" type="submit" data-toggle="modal" data-target="#Feedback">₹ | Ask For Price</button>
+						</div>
+						<div class="col-lg-6">
+							<div class="info">
+								<div class="infomain">
+									<h2>Fudge</h2>
+									<p>Fudge is a type of sugar candy that is made by mixing sugar, butter and milk, heating it to the soft-ball stage at 240 °F (116 °C), and then beating the mixture while it cools so that it acquires a smooth, creamy consistency. Fruits, nuts, chocolate, caramel, candies, sweets and other flavours are sometimes added either inside or on top.</p>
+									<p>In a letter written in 1921 by Emelyn Battersby Hartridge, she recounts the purchasing of a box of fudge for 40 cents a pound in 1886 in Baltimore, Maryland. A student at Vassar College in Poughkeepsie, New York, she claimed to have made introduced it there in 1888 by selling her own 30 lb (14 kg) batch. The diary of another student mentions making "fudges" in 1892. An 1893 letter from another Vassar College student describes "fudges" as containing sugar, chocolate, milk and butter. A recipe for "Fudges at Vassar" was printed in The Sun in 1895. Despite describing the confections as "Vassar chocolates", the recipe given comprises sugar, milk, butter and vanilla extract.</p>
+								</div>
+							</div>
+							<button class="btn btn-lg btn-primary btn-block" type="submit" data-toggle="modal" data-target="#Feedback">Yes! I am interested</button>
+						</div>
 					</div>
+				</div>
+			</section>
+			<section id="pay" class="container text-center">
+				<div class="row">
+					<br>
+					<h1>Payment methods</h1>
+					<h4>Donec vitae magna elementum, tempus ante in, aliquam nibh.</h4>
+					<br>
+					<img class=" img-thumbnail img-responsive" src="img/qr-code.png"  style="height: 350px; width: auto;" alt="QR Code">
+				</div>
+				<br>
+			</section>
+			<section id="find" class="container text-center">
+				<h1 style="color: #fff; font-size: 55px; margin-bottom: 10px;     margin-top: 40px;">Find Us</h1>
+				<h3 style="color: #fff; margin-bottom: 50px;"><i>We're in love with food. The secret of quality of life? Quality products.</i></h3>
+				<div class="row text-center">
+					<div class="col-lg-1"></div>
 					<div class="col-lg-6">
 						<div class="info">
 							<div class="infomain">
-								<h2>Fudge</h2>
-								<p>Fudge is a type of sugar candy that is made by mixing sugar, butter and milk, heating it to the soft-ball stage at 240 °F (116 °C), and then beating the mixture while it cools so that it acquires a smooth, creamy consistency. Fruits, nuts, chocolate, caramel, candies, sweets and other flavours are sometimes added either inside or on top.</p>
-								<p>In a letter written in 1921 by Emelyn Battersby Hartridge, she recounts the purchasing of a box of fudge for 40 cents a pound in 1886 in Baltimore, Maryland. A student at Vassar College in Poughkeepsie, New York, she claimed to have made introduced it there in 1888 by selling her own 30 lb (14 kg) batch. The diary of another student mentions making "fudges" in 1892. An 1893 letter from another Vassar College student describes "fudges" as containing sugar, chocolate, milk and butter. A recipe for "Fudges at Vassar" was printed in The Sun in 1895. Despite describing the confections as "Vassar chocolates", the recipe given comprises sugar, milk, butter and vanilla extract.</p>
-							</div>
-						</div>
-						<button class="btn btn-lg btn-primary btn-block" type="submit">Yes! I am interested</button>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="pay" class="container text-center">
-			<div class="row">
-				<br>
-				<h1>Payment methods</h1>
-				<h4>Donec vitae magna elementum, tempus ante in, aliquam nibh.</h4>
-				<br>
-				<img class=" img-thumbnail img-responsive" src="img/qr-code.png"  style="height: 350px; width: auto;" alt="QR Code">
-			</div>
-			<br>
-		</section>
-		<section id="find" class="container text-center">
-			<h1 style="color: #fff; font-size: 55px; margin-bottom: 10px;     margin-top: 40px;">Find Us</h1>
-			<h3 style="color: #fff; margin-bottom: 50px;"><i>We're in love with food. The secret of quality of life? Quality products.</i></h3>
-			<div class="row text-center">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-6">
-					<div class="info">
-						<div class="infomain">
-							<div class="row">
-								<div class="col-md-4">
-									<h3 style="text-align: left;
-									font-size: 20px; "><span class="glyphicon glyphicon-map-marker"></span> Find US</h3>
-									<p>Bd de Magenta</p>
-									<p>Paris, 1006, France</p>
-									<h3 style="text-align: left;
-									font-size: 20px;"><span class="glyphicon glyphicon-envelope"></span> Email </h3>
-									<p>office@mail.com</p>
-									<p>sales@mail.com</p>
-									<h3 style="text-align: left;
-									font-size: 20px;"> <span class="glyphicon glyphicon-earphone"></span> Phones</h3>
-									<p>+339 89 89 55 739</p>
-									<p>+339 89 89 55 739</p>
-								</div>
-								<div class="col-md-8">
-									<h3>Get in touch</h3>
-									<form class="form-horizontal" action="/action_page.php">
-										<input type="text" class="form-control"  placeholder="Name"><br>
-										<input type="text" class="form-control" placeholder="Contact Number"><br>
-										<input type="text" class="form-control" placeholder="E-mail"><br>
-										<textarea id="myTextarea" class="form-control" rows="5"  placeholder="Your Message"></textarea><br>
-										<button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
-									</form>
+								<div class="row">
+									<div class="col-md-4">
+										<h3 style="text-align: left;
+										font-size: 20px; "><span class="glyphicon glyphicon-map-marker"></span> Find US</h3>
+										<p>Bd de Magenta</p>
+										<p>Paris, 1006, France</p>
+										<h3 style="text-align: left;
+										font-size: 20px;"><span class="glyphicon glyphicon-envelope"></span> Email </h3>
+										<p>office@mail.com</p>
+										<p>sales@mail.com</p>
+										<h3 style="text-align: left;
+										font-size: 20px;"> <span class="glyphicon glyphicon-earphone"></span> Phones</h3>
+										<p>+339 89 89 55 739</p>
+										<p>+339 89 89 55 739</p>
+									</div>
+									<div class="col-md-8 text-center">
+										<h3>Get in touch</h3>
+										<form class="form-horizontal" action="/action_page.php">
+											<input type="text" class="form-control"  placeholder="Name"><br>
+											<input type="text" class="form-control" placeholder="Contact Number"><br>
+											<input type="text" class="form-control" placeholder="E-mail"><br>
+											<textarea id="myTextarea" class="form-control" rows="5"  placeholder="Your Message"></textarea><br>
+											<button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4">
-					
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120893.26608826048!2d73.34168238767816!3d18.757352815091803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be801098bdf8145%3A0x696b4a60a5e28658!2sLonavala%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1530097012782" width= "450px" height="461px" frameborder="2" style="border:3px solid White" allowfullscreen></iframe>
-					
+					<div class="col-lg-4">
+						
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120893.26608826048!2d73.34168238767816!3d18.757352815091803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be801098bdf8145%3A0x696b4a60a5e28658!2sLonavala%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1530097012782" width= "450px" height="461px" frameborder="2" style="border:3px solid White" allowfullscreen></iframe>
+						
+					</div>
 				</div>
 				<div class="col-lg-1"></div>
 			</section>
 			<script>
 			function myFunction() {
-			document.getElementById("myTextarea").placeholder = "Where do you live?";
+			document.getElementById("myTextarea").placeholder = "Your Messsage";
 			}
 			</script>
 		</body>
