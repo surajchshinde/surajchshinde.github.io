@@ -42,7 +42,7 @@
     }
     .sections.section-how-it-works {
     background: url(img/section1-bg.png) bottom center #ededed repeat-x;
-        margin-bottom: -3px;
+    margin-bottom: -3px;
     }
     .section-how-it-works .steps {
     border: 0px solid red;
@@ -63,6 +63,20 @@
     }
     .center, .section-how-it-works h3, .section-how-it-works p, .mobile-search-menu, .progress-dot, #mobile-menu li a, .result-merchant p.cod-text {
     text-align: center;
+    }
+    .blink{
+    /*font-size: 240px;*/
+    Color: #e4024f;
+    font-weight: bolder;
+    text-shadow: 2px 3px 3px #d0bac1;
+    animation: blink 1s infinite;
+    }
+    
+    @keyframes blink{
+    0%{opacity: 1;}
+    75%{opacity: 1;}
+    76%{ opacity: 0;}
+    100%{opacity: 0;}
     }
     #header {
     width: 100%;
@@ -213,13 +227,11 @@
     color: #FFEB3B;
     text-decoration: none;
     text-shadow: 0px 1px 25px red, 0px 2px 25px #0c061e;
-}
-a:focus, a:hover {
+    }
+    a:focus, a:hover {
     color: #3B2483;
     text-decoration: underline;
-
-}
-
+    }
     </style>
   </head>
   <body>
@@ -228,7 +240,8 @@ a:focus, a:hover {
     <div id="header">
       <div class="container">
         <h1 style="display: inline-block;"><img src="img/Logo.png" alt="LonavalaFoods.com" width="50px">  LonavalaFoods.com</h1>
-        <h3 class="pull-right" style="display: inline;     margin-top: 30px;"><i class="fa fa-whatsapp" aria-hidden="true"> +339 898955739</i>&nbsp;&nbsp;&nbsp; <i class="fa fa-phone" aria-hidden="true">+339 898955739</i> </h3>
+        <h3 class="blink pull-right " style="display: inline;margin-top: 30px; 
+     padding-left: 15px;" data-toggle="tooltip" data-placement="bottom"  title="Connect with us on Whatsapp!"><i class="fa fa-whatsapp" aria-hidden="true"> +339 898955739 </i> </h3>&nbsp;&nbsp;&nbsp;<h3 class="pull-right " style="display: inline;margin-top:30px;" data-toggle="tooltip" data-placement="left"  title="Call Now!"> <i class="fa fa-phone" aria-hidden="true"> +339 898955739</i> </h3>
       </div>
     </div>
     <button type="button" id="rotate" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#Feedback">Feedback</button>
@@ -346,11 +359,10 @@ a:focus, a:hover {
             <a class="navbar-brand" href="#"></a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
-            
             <ul class="nav navbar-nav">
               <li class="active"><a href="#header"><span class="glyphicon glyphicon-home"></span></a></li>
               <li><a href="#header">Speciality</a></li>
-              <li><a href="#how">How to</a></li>              
+              <li><a href="#how">How to</a></li>
               <li><a href="#chikki">Chikki</a></li>
               <li><a href="#jelly">Jelly</a></li>
               <li><a href="#fudge">Fudge</a></li>
@@ -502,7 +514,6 @@ a:focus, a:hover {
         </div>
         <br>
       </section>
-
       <section id="find" class="container text-center"><br>
         <h1 style="color: #fff; font-size: 55px; margin-bottom: 10px;     margin-top: 40px;">Find Us</h1>
         <h3 style="color: #fff; margin-bottom: 50px;"><i>We're in love with food. The secret of quality of life? Quality products.</i></h3>
@@ -593,6 +604,9 @@ a:focus, a:hover {
       function myFunction() {
       document.getElementById("myTextarea").placeholder = "Your Messsage";
       }
+      $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
       </script>
     </body>
   </html>
