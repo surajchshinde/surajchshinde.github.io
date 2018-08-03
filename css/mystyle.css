@@ -86,6 +86,7 @@
 			/*filter: grayscale(0);*/
 			opacity: 1;
 			transform: scale(1.4);
+			cursor: zoom-in;
 		}
 		.gallery .col-lg-2{
 			margin: 35px 0 35px 0;
