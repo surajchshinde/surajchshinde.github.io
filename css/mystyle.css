@@ -79,7 +79,8 @@ letter-spacing: 1px;
 .borderstyleIn>h4{
 font-size: 15px;
 letter-spacing: 1px;
-text-align: center;
+/*text-align: center;*/
+padding-left: 10px;
 }
 .gallery img{
 width: 150px;
@@ -91,9 +92,18 @@ transition: 200ms;
 .gallery img:hover{
 /*filter: grayscale(0);*/
 opacity: 1;
-transform: scale(1.4);
+transform: scale(1.8);
 cursor: zoom-in;
 }
 .gallery .col-lg-2{
 margin: 35px 0 35px 0;
+}
+table th{
+	text-align: center;
+}
+table td{
+	/*padding: 0 10px;*/
+}
+.glyphicon-star{
+	color: gold;
 }
